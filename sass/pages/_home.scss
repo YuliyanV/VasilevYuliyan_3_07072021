@@ -1,0 +1,252 @@
+// Header
+.header {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: $header-background-color;
+    box-shadow: 0 1px 9px $header-box-shadow;
+    &__logo {
+        width: 10rem;
+    }
+}
+
+// Location
+.location {
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: $location-background-color;
+    &__city {
+        margin-left: 1rem;
+    }
+}
+
+
+// Title
+.title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    width: 20rem;
+
+    &__main {
+        padding: 1rem;
+    }
+
+    &__sub {
+        font-weight: 100;
+        margin-bottom: 1rem;
+    }
+
+    &__btn {
+        text-decoration: none;
+        display: block;
+        border-radius: 50px;
+        cursor: pointer;
+        margin: 0 auto;
+        padding: 1.2rem 2rem;
+        color: $text-color-invert;
+        background: linear-gradient(173deg, $color-secondary, $color-primary);
+        box-shadow: 2px 9px 25px -5px $title-btn-box-shadow;
+        transition: all 500ms;
+
+        &:hover {
+            transform: scale(1);
+            background: linear-gradient(173deg, $color-secondary 15%, $color-primary 85%);
+            box-shadow: 2px 9px 25px -5px #000000b3;
+        }
+    }
+}
+
+
+
+
+// Functioning
+
+.functioning {
+    background-color: $functioning-background-color;
+    padding: 3rem 1rem;
+
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__btn-filter {
+        display: flex;
+        text-align: center;
+        position: relative;
+        color: $text-color;
+        margin-bottom: 1.5rem;
+        text-decoration: none;
+        background-color: $body-color-background;
+        padding: 1.5rem;
+        border-radius: 20px;
+        outline: none;
+        width: 100%;
+        box-shadow: 2px 9px 25px -5px $btn-box-shadow;
+
+        &:hover  {
+            background-color: lighten($color-primary, 30%);
+            transition: all 500ms;
+
+            .functioning__btn-icon {
+                color: $color-primary;
+            }
+        }
+
+    }
+
+    &__btn-num {
+        position: absolute;
+        left: -.5rem;
+        background-color: $color-primary;
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $text-color-invert;
+    }
+
+    &__btn-icon {
+        margin-left: 1.5rem;
+        color: $icon-color;
+
+    }
+
+    &__btn-text {
+        margin-left: 1rem;
+        color: text-color;
+    }
+}
+
+
+// Restaurants
+.restaurants {
+    padding: 3rem 1rem;
+
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__card {
+        width: 100%;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        box-shadow: 2px 9px 25px -5px $card-box-shadow;
+        text-decoration: none;
+
+        a {
+            text-decoration: none;
+            color: $text-color;
+
+            &:hover,
+            &:focus {
+                color: darken($color: $color-primary, $amount: 20%);
+                transition: all 500ms;
+                outline: none;
+            }
+        }
+    }
+
+    &__card-img {
+        position: relative;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 13rem;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        p {
+            position: absolute;
+            text-decoration: none;
+            color: #179674;
+            background-color: $color-tertiary;
+            padding: .4rem;
+            top: -11rem;
+            right: .6rem;
+            border-radius: 3px;
+            font-size: .7rem;
+        }
+    }
+
+
+    &__card-description {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: .7rem;
+        color: $text-color;
+
+        h3 {
+            margin-bottom: .4rem;
+        }
+
+        i {
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+    }
+
+
+}
+
+
+// Footer
+.footer {
+    background-color: $footer-background;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    a {
+        text-decoration: none;
+        color: $text-color-invert;
+        margin-bottom: 1rem;
+    }
+
+    a:hover,
+    a:focus {
+        color: darken($color: $color-primary, $amount: 5%);
+        transition: all 500ms;
+        outline: none;
+    }
+
+    &__links {
+        margin-bottom: .5rem;
+    }
+
+    &__icon {
+        font-size: .7rem;
+        margin-right: .6rem;
+    }
+
+
+    &__logo {
+        font-family: 'Shrikhand', cursive;
+        font-weight: bolder;
+        font-size: 1.2rem;
+    }
+}

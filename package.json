@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:public/css/style.css"
+    "sass": "sass --watch ./sass/main.scss:public/css/style.css",
+    "serve": "serve public"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.36.0",
+    "serve": "^12.0.0"
+  }
 }
