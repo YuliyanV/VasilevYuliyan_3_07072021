@@ -1,3 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.delay-1 {
+  animation-name: fromBottom;
+  animation-duration: 1s;
+}
+
+.delay-2 {
+  animation-name: fromBottom;
+  animation-duration: 2s;
+}
+
+.delay-3 {
+  animation-name: fromBottom;
+  animation-duration: 3s;
+}
+
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 *,
 *:before,
 *:after {
@@ -22,9 +48,97 @@ h1 {
 
 h2 {
   font-family: "Shrikhand", cursive;
-  font-weight: bolder;
 }
 
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .functioning__title {
+    text-align: center;
+  }
+  .functioning__btn {
+    max-width: 30rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .restaurants {
+    margin: 0 auto;
+    width: 70% !important;
+  }
+  .restaurants__title {
+    text-align: center;
+  }
+  .restaurants__card {
+    max-width: 40rem;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  body {
+    margin: 0 auto;
+  }
+
+  .restaurants {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .restaurants__title {
+    font-size: 2.2rem;
+  }
+  .restaurants__cards {
+    display: grid !important;
+    justify-items: center;
+    grid-gap: 2rem 3rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .restaurant__image img {
+    height: 40vh;
+  }
+
+  .restaurant {
+    width: 85%;
+    margin: 0 auto;
+    box-shadow: 0px 9px 26px 0px #000000;
+  }
+  .restaurant__title {
+    justify-content: center !important;
+  }
+  .restaurant__title h2 {
+    font-size: 2rem !important;
+    margin-right: 3rem;
+  }
+  .restaurant__menu {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .header__new-page a {
+    margin-left: 7rem;
+  }
+
+  .restaurant__image__bg-image {
+    height: 50vh !important;
+  }
+
+  .restaurant {
+    max-width: 85%;
+    width: 100%;
+  }
+  .restaurant__title {
+    margin-bottom: 2rem !important;
+  }
+  .restaurant__menu {
+    max-width: 50%;
+  }
+}
 .header {
   padding: 1rem;
   width: 100%;
@@ -71,7 +185,7 @@ h2 {
   padding: 1.2rem 2rem;
   color: #ffffff;
   background: linear-gradient(173deg, #FF79DA, #9356DC);
-  box-shadow: 2px 9px 25px -5px #00000083;
+  box-shadow: 2px 9px 25px -5px 2px 9px 25px -5px #000000b3;
   transition: all 500ms;
 }
 .title__btn:hover {
@@ -197,6 +311,10 @@ h2 {
   font-size: 1.6rem;
   cursor: pointer;
 }
+.restaurants__card-description i:hover {
+  color: red;
+  background-color: red;
+}
 
 .footer {
   background-color: #3d3d3d;
@@ -231,6 +349,16 @@ h2 {
 
 .header {
   position: relative;
+}
+.header .header {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 1px 9px #0000005b;
+}
+.header .header__logo {
+  width: 10rem;
 }
 .header__new-page {
   display: flex;
@@ -269,10 +397,10 @@ h2 {
   padding: 0.5rem;
 }
 .restaurant__title h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 .restaurant__title i {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 .restaurant__menu {
   margin-bottom: 2.5rem;
@@ -307,7 +435,7 @@ h2 {
 }
 .restaurant__menu-item p {
   font-weight: lighter;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 .restaurant__menu-price {
   font-weight: bolder;
@@ -328,8 +456,9 @@ h2 {
   padding: 1.2rem 2rem;
   color: #ffffff;
   background: linear-gradient(173deg, #FF79DA, #9356DC);
-  box-shadow: 2px 9px 25px -5px #00000083;
+  box-shadow: 2px 9px 25px -5px 2px 9px 25px -5px #000000b3;
   transition: all 500ms;
+  box-shadow: 2px 9px 25px -5px #000000b3;
   display: inline-block;
   padding: 1rem 3rem;
 }
@@ -337,6 +466,37 @@ h2 {
   transform: scale(1);
   background: linear-gradient(173deg, #FF79DA 15%, #9356DC 85%);
   box-shadow: 2px 9px 25px -5px #000000b3;
+}
+
+.footer {
+  background-color: #3d3d3d;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.footer a {
+  text-decoration: none;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.footer a:hover,
+.footer a:focus {
+  color: #8641d8;
+  transition: all 500ms;
+  outline: none;
+}
+.footer__links {
+  margin-bottom: 0.5rem;
+}
+.footer__icon {
+  font-size: 0.7rem;
+  margin-right: 0.6rem;
+}
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  font-weight: bolder;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

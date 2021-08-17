@@ -1,0 +1,131 @@
+
+// Home-Page
+@media only screen and (min-width: $tabletBreakPoint) {
+
+
+    // Functioning
+    .functioning {
+
+
+        &__title {
+            text-align: center;
+        }
+
+        &__btn {
+            max-width: 30rem;;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+    }
+
+
+    // Restaurants
+    .restaurants {
+        margin: 0 auto;
+        width: 70% !important;
+
+        &__title {
+            text-align: center;
+        }
+
+        &__card {
+            max-width: 40rem;
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: $desktopBreakPoint) {
+    body {
+        margin: 0 auto;
+    }
+
+    .restaurants {
+        width: 70%;
+        margin: 0 auto;
+
+            &__title {
+                font-size: 2.2rem;
+            }
+
+            &__cards {
+                display: grid !important;
+                justify-items: center;
+                grid-gap: 2rem 3rem;
+                grid-template-columns: 1fr 1fr;
+            }
+    }
+}
+
+
+
+
+
+
+
+// Restaurants
+@media only screen and (min-width: $tabletBreakPoint) {
+    .restaurant__image {
+        img {
+            height: 40vh;
+        }
+    }
+
+
+    .restaurant {
+        width: 85%;
+        margin: 0 auto;
+        box-shadow: 0px 9px 26px 0px #000000;
+
+        &__title {
+            justify-content: center !important;
+
+            h2 {
+                font-size: 2rem !important;
+                margin-right: 3rem;
+            }
+
+        }
+
+        &__menu {
+            max-width: 80%;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+
+
+@media only screen and (min-width: $desktopBreakPoint) {
+
+    .header__new-page {
+        a {
+            margin-left: 7rem;
+        }
+    }
+
+    .restaurant__image__bg-image {
+        height: 50vh !important;
+    }
+
+
+    .restaurant {
+        max-width: 85%;
+        width: 100%;
+
+        &__title {
+            margin-bottom: 2rem !important;
+        }
+
+
+        &__menu {
+            max-width: 50%;
+        }
+    }
+
+}

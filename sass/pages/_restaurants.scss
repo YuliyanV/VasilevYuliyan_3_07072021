@@ -1,4 +1,5 @@
 .header {
+    @include header;
     position: relative;
 
     &__new-page {
@@ -50,11 +51,11 @@
         padding: .5rem;
 
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
         }
 
         i {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
         }
 
     }
@@ -99,7 +100,7 @@
 
             p {
                 font-weight: lighter;
-                font-size: .9rem;
+                font-size: .7rem;
             }
         }
 
@@ -121,10 +122,15 @@
 
         &-cmd {
             @include button;
+            box-shadow: $title-btn-box-shadow;
             display: inline-block;
             padding: 1rem 3rem;
         }
     }
+}
+
+.footer {
+    @include footer;
 }
 
 
