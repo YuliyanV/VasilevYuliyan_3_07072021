@@ -1,22 +1,12 @@
-// Restaurants ->  EntréesAnimation
-.restaurant__menu-description:nth-child(2) {
-    animation-name: fromBottom;
-    animation-duration: 1.5s;
-}
 
-.restaurant__menu-description:nth-child(3) {
-    animation-name: fromBottom;
-    animation-duration: 2s;
-}
 
-.restaurant__menu-description:nth-child(4) {
-    animation-name: fromBottom;
-    animation-duration: 2.5s;
-}
-
-.restaurant__menu-description:nth-child(5) {
-    animation-name: fromBottom;
-    animation-duration: 3s;
+// Restaurants Menu Description Animation
+@for $i from 2 through 5 {
+    .restaurant__menu-description:nth-child(#{$i}) {
+        animation-name: fromBottom;
+        animation-duration: ($i+1) * .5s;
+        animation-timing-function: ease-out;
+    }
 }
 
 
@@ -31,3 +21,65 @@
         opacity: 1;
     }
 }
+
+
+// Restaurants Menu Description Animation Hover Effect
+// .restaurant__menu-description {
+//     &:hover,
+//       .restaurant__menu-icon {
+//         animation-name: hoverAnimation;
+//         animation-duration: 1s;
+//         animation-timing-function: ease-in-out;
+//     }
+// }
+
+
+// @keyframes hoverAnimation {
+//     0% {
+//         opacity: 0;
+//     }
+
+//     100% {
+//         width: 2rem;
+//         opacity: 1;
+//     }
+// }
+
+
+
+
+
+
+// Restaurants Menu Title Underline Animation
+.restaurant__menu-title {
+    &::after {
+        animation-name: fromLeftToRight;
+        animation-duration: 1.9s;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+@keyframes fromLeftToRight {
+    0% {
+        opacity: 0;
+        width: 0%;
+    }
+
+    80% {
+        width: 3.5rem;
+    }
+
+    100% {
+        opacity: 1;
+        width: 2.5rem;
+    }
+}
+
+
+
+
+
+
+// Restaurants Menu Description animation
+
+

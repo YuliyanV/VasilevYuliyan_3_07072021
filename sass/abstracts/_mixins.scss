@@ -1,6 +1,6 @@
-@mixin box-shadow {
-    box-shadow: 2px 9px 25px -5px $btn-box-shadow;
-}
+// @mixin box-shadow {
+//     box-shadow: 2px 9px 25px -5px $btn-box-shadow;
+// }
 
 
 
@@ -21,15 +21,77 @@
 }
 
 
+
+
+@mixin button {
+        text-decoration: none;
+        display: block;
+        border-radius: 50px;
+        cursor: pointer;
+        margin: 0 auto;
+        padding: 1.2rem 2rem;
+        color: $text-color-invert;
+        background: linear-gradient(173deg, $color-secondary, $color-primary);
+        box-shadow: $btn-box-shadow;
+        transition: all 500ms;
+
+        &:hover {
+            transform: scale(1);
+            background: linear-gradient(173deg, $color-secondary 30%, $color-primary 70%);
+            box-shadow: $title-btn-box-shadow;
+        }
+}
+
+
+@mixin heart {
+
+
+        input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        input:checked + label {
+            .checked {
+                display: block;
+            }
+
+            .unchecked {
+                display: none;
+            }
+
+        }
+
+        label {
+            position: relative;
+            font-size: 1.8rem;
+        }
+
+        img {
+            width: 1.8rem;
+        }
+
+        .checked {
+            display: none;
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+
+
+}
+
+
+
+
 // Footer
 @mixin footer {
     background-color: $footer-background;
-    height: 35vh;
     display: flex;
     flex-direction: column;
     padding: 1rem;
 
     a {
+        display: inline-block;
         text-decoration: none;
         color: $text-color-invert;
         margin-bottom: 1rem;
@@ -37,7 +99,10 @@
 
     a:hover,
     a:focus {
-        color: darken($color: $color-primary, $amount: 5%);
+        // color: darken($color: $color-primary, $amount: 5%);
+        background-image: linear-gradient(90deg, $color-primary,$color-secondary);
+        -webkit-background-clip: text;
+        color: transparent;
         transition: all 500ms;
         outline: none;
     }
@@ -57,28 +122,4 @@
         font-weight: bolder;
         font-size: 1.2rem;
     }
-    }
-
-
-
-@mixin button {
-        text-decoration: none;
-        display: block;
-        border-radius: 50px;
-        cursor: pointer;
-        margin: 0 auto;
-        padding: 1.2rem 2rem;
-        color: $text-color-invert;
-        background: linear-gradient(173deg, $color-secondary, $color-primary);
-        box-shadow: 2px 9px 25px -5px $title-btn-box-shadow;
-        transition: all 500ms;
-
-        &:hover {
-            transform: scale(1);
-            background: linear-gradient(173deg, $color-secondary 15%, $color-primary 85%);
-            box-shadow: $title-btn-box-shadow;
-        }
 }
-
-
-

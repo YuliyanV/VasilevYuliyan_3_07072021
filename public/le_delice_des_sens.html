@@ -8,20 +8,21 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo/omf.png" type="image/x-icon" />
     <title>Le délice des sens</title>
 </head>
 
 <body>
     <!-- Header -->
     <header class="header header__new-page">
-        <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
+        <a class="header__new-page-arrow" href="../index.html"><i class="fas fa-arrow-left"></i></a>
         <img class="header__logo" src="images/logo/ohmyfood.png" alt="This is a page logo">
     </header>
 
 
     <!-- Reastaurant-Image -->
     <div class="restaurant__image">
-        <img class="restaurant__image__bg-image"
+        <img class="restaurant__image__background"
             src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
             alt="Restaurant background image">
     </div>
@@ -30,9 +31,17 @@
 
     <!-- Menu -->
     <section class="restaurant">
+
+
+
         <div class="restaurant__title">
-            <h2>Le délice des sens</h2>
-            <i class="far fa-heart"></i>
+            <h2 class="restaurant__title-main">Le délice des sens</h2>
+
+            <div class="restaurant__title__form-check">
+                <input type="checkbox" id="heart" name="heart">
+                <label for="heart"><img class="checked" src="/images/icon/heart-solid.svg" alt=""><img class="unchecked"
+                        src="/images/icon/heart-regular.svg" alt=""></label>
+            </div>
         </div>
 
 
@@ -46,10 +55,10 @@
                 <!-- Entrées -->
                 <h3 class="restaurant__menu-title">Entrées</h3>
 
-                <div class="restaurant__menu-description delay-1">
+                <div class="restaurant__menu-description">
                     <div class="restaurant__menu-item">
-                        <h3>Tartares de thon</h3>
-                        <p>Assaisonné au yuzu</p>
+                        <h3 class="restaurant__menu-item-title">Tartares de thon</h3>
+                        <p class="restaurant__menu-item-subtitle">Assaisonné au yuzu</p>
                     </div>
 
                     <div class="restaurant__menu-price">
@@ -61,10 +70,10 @@
                     </div>
                 </div>
 
-                <div class="restaurant__menu-description delay-2">
+                <div class="restaurant__menu-description">
                     <div class="restaurant__menu-item">
-                        <h3>Bouchée de homard croustillant</h3>
-                        <p>Et sa farandole de petits légumes</p>
+                        <h3 class="restaurant__menu-item-title">Bouchée de homard croustillant</h3>
+                        <p class="restaurant__menu-item-subtitle">Et sa farandole de petits légumes</p>
                     </div>
 
                     <div class="restaurant__menu-price">
@@ -76,10 +85,10 @@
                     </div>
                 </div>
 
-                <div class="restaurant__menu-description delay-3">
+                <div class="restaurant__menu-description">
                     <div class="restaurant__menu-item">
-                        <h3>Velouté de cèpes</h3>
-                        <p>Aux truffes</p>
+                        <h3 class="restaurant__menu-item-title">Velouté de cèpes</h3>
+                        <p class="restaurant__menu-item-subtitle">Aux truffes</p>
                     </div>
 
                     <div class="restaurant__menu-price">
@@ -103,10 +112,10 @@
                 <!-- Plats -->
                 <h3 class="restaurant__menu-title">Plats</h3>
 
-                <div class="restaurant__menu-description delay-1">
+                <div class="restaurant__menu-description">
                     <div class="restaurant__menu-item">
-                        <h3>Poulet rôti aux herbes de provences</h3>
-                        <p>Et sa crème de truffe</p>
+                        <h3 class="restaurant__menu-item-title">Poulet rôti aux herbes de provences</h3>
+                        <p class="restaurant__menu-item-subtitle">Et sa crème de truffe</p>
                     </div>
 
                     <div class="restaurant__menu-price">
@@ -118,10 +127,10 @@
                     </div>
                 </div>
 
-                <div class="restaurant__menu-description delay-2">
+                <div class="restaurant__menu-description">
                     <div class="restaurant__menu-item">
-                        <h3>Langouste rôtie</h3>
-                        <p>Et ses légumes de saison</p>
+                        <h3 class="restaurant__menu-item-title">Langouste rôtie</h3>
+                        <p class="restaurant__menu-item-subtitle">Et ses légumes de saison</p>
                     </div>
 
                     <div class="restaurant__menu-price">
@@ -133,10 +142,10 @@
                     </div>
                 </div>
 
-                <div class="restaurant__menu-description delay-3">
+                <div class="restaurant__menu-description">
                     <div class="restaurant__menu-item">
-                        <h3>Côte de boeuf angus</h3>
-                        <p>Et sa purée de panais</p>
+                        <h3 class="restaurant__menu-item-title">Côte de boeuf angus</h3>
+                        <p class="restaurant__menu-item-subtitle">Et sa purée de panais</p>
                     </div>
 
                     <div class="restaurant__menu-price">
@@ -160,10 +169,10 @@
                 <!-- Desserts -->
                 <h3 class="restaurant__menu-title">Desserts</h3>
 
-                <div class="restaurant__menu-description delay-1">
+                <div class="restaurant__menu-description">
                     <div class="restaurant__menu-item">
-                        <h3>Farandole de desserts</h3>
-                        <p>Du chef</p>
+                        <h3 class="restaurant__menu-item-title">Farandole de desserts</h3>
+                        <p class="restaurant__menu-item-subtitle">Du chef</p>
                     </div>
 
                     <div class="restaurant__menu-price">
@@ -175,10 +184,10 @@
                     </div>
                 </div>
 
-                <div class="restaurant__menu-description delay-2">
+                <div class="restaurant__menu-description">
                     <div class="restaurant__menu-item">
-                        <h3>Crème brulée</h3>
-                        <p>Revisitée</p>
+                        <h3 class="restaurant__menu-item-title">Crème brulée</h3>
+                        <p class="restaurant__menu-item-subtitle">Revisitée</p>
                     </div>
 
                     <div class="restaurant__menu-price">
@@ -190,10 +199,10 @@
                     </div>
                 </div>
 
-                <div class="restaurant__menu-description delay-3">
+                <div class="restaurant__menu-description">
                     <div class="restaurant__menu-item">
-                        <h3>Tiramisu</h3>
-                        <p>A la noisette</p>
+                        <h3 class="restaurant__menu-item-title">Tiramisu</h3>
+                        <p class="restaurant__menu-item-subtitle">A la noisette</p>
                     </div>
 
                     <div class="restaurant__menu-price">
