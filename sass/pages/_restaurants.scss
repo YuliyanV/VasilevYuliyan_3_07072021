@@ -10,7 +10,7 @@
         &-arrow {
             color: $text-color;
             position: absolute;
-            left: .3rem;
+            left: 1.2rem;
             font-size: 1.3rem;
 
             i:hover {
@@ -49,7 +49,7 @@
     &__title {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        align-items: baseline;
         margin-bottom: 1.5rem;
         padding: .5rem;
 
@@ -59,6 +59,9 @@
 
         &__form-check {
             @include heart;
+            position: relative;
+            top: .5rem;
+            left: 1rem;
         }
 
 
@@ -92,34 +95,70 @@
             background-color: $text-color-invert;
             border-radius: 15px;
             margin-bottom: 1.2rem;
-            padding: .8rem;
             box-shadow: 2px 9px 25px -9px #00000047;
+
+
+
+            height: 70px;
+
+            &:hover {
+                cursor: pointer;
+
+                .restaurant__menu-icon {
+                    width: 80px;
+
+
+                    .fa-check-circle {
+                        transform: rotate(360deg);
+                        transition: transform 1s ease-in-out;
+                    }
+                }
+            }
         }
 
         &-item {
             flex-grow: 1;
+            padding: .8rem;
 
             &-title {
                 margin-bottom: .5rem;
-                font-size: 1rem;
+                font-size: .9rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+
             }
 
             &-subtitle {
-                font-weight: lighter;
-                font-size: .9rem;
-                overflow: hidden;
+                font-size: .78rem;
                 white-space: nowrap;
                 text-overflow: ellipsis;
+                overflow: hidden;
             }
         }
 
         &-price {
             font-weight: bolder;
+            padding: 0 .8rem .8rem 0;
+            background-color: transparent;
         }
 
         &-icon {
-            // width: 0;
-            // overflow: hidden;
+            line-height: 70px;
+            height: 100%;
+            width: 0;
+            background-color: $color-tertiary;
+            color: #fff;
+            font-size: 1.5rem;
+            border-radius: 0 15px 15px 0;
+            transition: width 1s ease-in-out;
+
+            .fa-check-circle{
+                margin-left: 30px;
+            }
+
+
+            overflow: hidden;
         }
     }
 
@@ -133,7 +172,7 @@
         &-cmd {
             @include button;
             display: inline-block;
-            padding: 1rem 3rem;
+            padding: .8rem 2.3rem;
         }
     }
 }
