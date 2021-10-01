@@ -34,7 +34,8 @@
     text-align: center;
     margin: 0 auto;
     padding-bottom: 2.5rem;
-    width: 20rem;
+    width: 100%;
+    max-width: 20rem;
 
     &__main {
         padding: 1rem;
@@ -82,11 +83,12 @@
         border-radius: 20px;
         outline: none;
         width: 100%;
-        box-shadow: 2px 9px 25px -5px $btn-box-shadow;
+        box-shadow: $fnc-box-shadow;
 
         &:hover  {
             background-color: lighten($color-primary, 30%);
             transition: all 500ms;
+            box-shadow: $fnc-hover-box-shadow;
 
             .functioning__btn-icon {
                 color: $color-primary;
@@ -116,7 +118,7 @@
 
     &__btn-text {
         margin-left: 1rem;
-        color: text-color;
+        color: $text-color;
     }
 }
 

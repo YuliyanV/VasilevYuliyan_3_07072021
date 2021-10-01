@@ -1,8 +1,70 @@
+
+
+
+
 // Home-Page
+@media only screen and (max-width: $phoneBreakPoint) {
+
+    .title {
+        &__main {
+            font-size: 1.3rem;
+        }
+
+        &__sub {
+            font-size: .9rem;
+        }
+
+        &__btn {
+            font-size: .7rem;
+        }
+    }
+
+    .functioning {
+
+        &__title {
+            font-size: 1.3rem;
+        }
+
+
+        &__btn-filter {
+            font-size: .7rem;
+        }
+
+        &__btn-num {
+            font-size: .7rem;
+            bottom: 1.1rem;
+        }
+    }
+
+
+    .restaurants {
+
+        &__title {
+            font-size: 1.3rem;
+        }
+
+        &__card-description {
+
+            &-title {
+                font-size: 1.2rem;
+            }
+
+            &-subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        .checked,
+        .unchecked {
+            width: 1.5rem;
+        }
+    }
+
+}
+
+
+
 @media only screen and (min-width: $tabletBreakPoint) {
-
-
-    // Functioning
     .functioning {
 
 
@@ -19,7 +81,6 @@
     }
 
 
-    // Restaurants
     .restaurants {
         margin: 0 auto;
         width: 70% !important;
@@ -67,6 +128,17 @@
 
 // Restaurants
 
+@media only screen and (max-width: $phoneBreakPoint) {
+    .restaurant__title {
+        &__main {
+            font-size: 1.3rem !important;
+        }
+    }
+
+}
+
+
+
 @media only screen and (min-width: $tabletBreakPoint) {
 
     .header__new-page {
@@ -81,10 +153,13 @@
         box-shadow: 0px 9px 26px 0px #000000;
 
         &__title {
-            justify-content: center;
+            justify-content: center !important;
 
+            &__main {
+                margin: 0 1.5rem 1.5rem 0;
+            }
 
-    }
+        }
 
     .main {
         font-size: 2rem;
@@ -126,8 +201,13 @@
         max-width: 80%;
         width: 100%;
 
-        &__title-main {
-            margin-bottom: 1.5rem;
+        &__title {
+            justify-content: center !important;
+
+            &__main {
+                margin: 0 1.5rem 1.5rem 0;
+            }
+
         }
 
 

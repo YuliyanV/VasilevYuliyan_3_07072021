@@ -30,7 +30,7 @@
 
         &:hover {
             transform: scale(1.1);
-            background: linear-gradient lighter(173deg, $color-secondary, $color-primary);
+            background: linear-gradient(173deg, lighten($color-secondary, 3%), lighten($color-primary, 3%));
             box-shadow: $btn-hover-box-shadow;
         }
 }
@@ -57,11 +57,17 @@
         label {
             position: relative;
             font-size: 1.8rem;
+
+            .checked,
+            .unchecked {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
         }
 
-        img {
-            width: 1.8rem;
-        }
+        // img {
+        //     width: 1.8rem;
+        // }
 
         .checked {
             display: none;
@@ -89,7 +95,6 @@
 
     a:hover,
     a:focus {
-        // color: darken($color: $color-primary, $amount: 5%);
         background-image: linear-gradient(90deg, $color-primary,$color-secondary);
         -webkit-background-clip: text;
         color: transparent;

@@ -48,12 +48,11 @@
 
     &__title {
         display: flex;
-        align-items: center;
         align-items: baseline;
+        justify-content: space-between;
         margin-bottom: 1.5rem;
-        padding: .5rem;
 
-        &-main {
+        &__main {
             font-size: 1.5rem;
         }
 
@@ -61,7 +60,6 @@
             @include heart;
             position: relative;
             top: .5rem;
-            left: 1rem;
         }
 
 
@@ -119,6 +117,8 @@
         &-item {
             flex-grow: 1;
             padding: .8rem;
+            overflow: hidden;
+            width: 0;
 
             &-title {
                 margin-bottom: .5rem;
