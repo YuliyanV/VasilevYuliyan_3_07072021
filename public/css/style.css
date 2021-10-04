@@ -1,4 +1,13 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@keyframes test {
+  from {
+    background-position-y: 0.2rem;
+  }
+  to {
+    background-position-y: -0.2rem;
+  }
+}
 .restaurant__menu-description:nth-child(2) {
   animation-name: fromBottom;
   animation-duration: 1.5s;
@@ -507,32 +516,18 @@ h2 {
 .restaurants__card-description-title {
   margin-bottom: 0.4rem;
 }
-.restaurants__form-check {
-  position: relative;
+.restaurants__card-description-heart::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: initial;
+  font-size: 2rem;
 }
-.restaurants__form-check input {
-  position: absolute;
-  opacity: 0;
-}
-.restaurants__form-check input:checked + label .checked {
-  display: block;
-}
-.restaurants__form-check input:checked + label .unchecked {
-  display: none;
-}
-.restaurants__form-check label {
-  position: relative;
-  font-size: 1.8rem;
-}
-.restaurants__form-check label .checked,
-.restaurants__form-check label .unchecked {
-  width: 1.8rem;
-  height: 1.8rem;
-}
-.restaurants__form-check .checked {
-  display: none;
-  width: 1.8rem;
-  height: 1.8rem;
+.restaurants__card-description-heart:hover::after {
+  font-weight: bold;
+  background: linear-gradient(365deg, #6100d7, #ffaee8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: test 1.5s forwards;
 }
 
 .footer {
@@ -615,40 +610,24 @@ h2 {
 }
 .restaurant__title {
   display: flex;
-  align-items: baseline;
   justify-content: space-between;
   margin-bottom: 1.5rem;
 }
 .restaurant__title__main {
   font-size: 1.5rem;
 }
-.restaurant__title__form-check {
-  position: relative;
-  top: 0.5rem;
+.restaurant__title__heart::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: initial;
+  font-size: 2rem;
 }
-.restaurant__title__form-check input {
-  position: absolute;
-  opacity: 0;
-}
-.restaurant__title__form-check input:checked + label .checked {
-  display: block;
-}
-.restaurant__title__form-check input:checked + label .unchecked {
-  display: none;
-}
-.restaurant__title__form-check label {
-  position: relative;
-  font-size: 1.8rem;
-}
-.restaurant__title__form-check label .checked,
-.restaurant__title__form-check label .unchecked {
-  width: 1.8rem;
-  height: 1.8rem;
-}
-.restaurant__title__form-check .checked {
-  display: none;
-  width: 1.8rem;
-  height: 1.8rem;
+.restaurant__title__heart:hover::after {
+  font-weight: bold;
+  background: linear-gradient(365deg, #6100d7, #ffaee8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: test 1.5s forwards;
 }
 .restaurant__menu {
   margin-bottom: 2.5rem;

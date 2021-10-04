@@ -48,7 +48,6 @@
 
     &__title {
         display: flex;
-        align-items: baseline;
         justify-content: space-between;
         margin-bottom: 1.5rem;
 
@@ -56,11 +55,17 @@
             font-size: 1.5rem;
         }
 
-        &__form-check {
-            @include heart;
-            position: relative;
-            top: .5rem;
-        }
+       &__heart {
+           @include heart;
+       }
+
+
+        // Heart Old Animation
+        // &__form-check {
+        //     @include heart;
+        //     position: relative;
+        //     top: .5rem;
+        // }
 
 
     }

@@ -36,47 +36,37 @@
 }
 
 
-// Heart
+
+
+
 @mixin heart {
-        input {
-            position: absolute;
-            opacity: 0;
+        &::after {
+            content: "\f004";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: initial;
+            font-size: 2rem;
+            // display: flex;
+            // align-items: center;
         }
 
-        input:checked + label {
-            .checked {
-                display: block;
-            }
-
-            .unchecked {
-                display: none;
-            }
-
+        &:hover::after {
+            font-weight: bold;
+            background: linear-gradient(365deg, darken( $heart-color-primary, 15%), $heart-color-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: test 1.5s forwards;
         }
+    }
 
-        label {
-            position: relative;
-            font-size: 1.8rem;
+@keyframes test {
+    from {
+        background-position-y: .2rem;
+    }
 
-            .checked,
-            .unchecked {
-                width: 1.8rem;
-                height: 1.8rem;
-            }
-        }
-
-        // img {
-        //     width: 1.8rem;
-        // }
-
-        .checked {
-            display: none;
-            width: 1.8rem;
-            height: 1.8rem;
-        }
+    to {
+        background-position-y: -.2rem;
+    }
 }
-
-
 
 
 // Footer
@@ -118,3 +108,46 @@
         font-size: 1.2rem;
     }
 }
+
+
+
+
+
+
+// Heart Old Animation
+// @mixin heart {
+//         input {
+//             position: absolute;
+//             opacity: 0;
+//         }
+
+//         input:checked + label {
+//             .checked {
+//                 display: block;
+//             }
+
+//             .unchecked {
+//                 display: none;
+//             }
+
+//         }
+
+//         label {
+//             position: relative;
+//             font-size: 1.8rem;
+
+//             .checked,
+//             .unchecked {
+//                 width: 1.8rem;
+//                 height: 1.8rem;
+//             }
+//         }
+
+
+
+//         .checked {
+//             display: none;
+//             width: 1.8rem;
+//             height: 1.8rem;
+//         }
+// }

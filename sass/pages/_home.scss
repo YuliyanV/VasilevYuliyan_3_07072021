@@ -199,13 +199,19 @@
             margin-bottom: .4rem;
         }
 
+        &-heart {
+            @include heart;
+        }
+
+
     }
 
-    &__form-check {
-        position: relative;
+    // Heart Old Animation
+    // &__form-check {
+    //     position: relative;
 
-        @include heart;
-    }
+    //     @include heart;
+    // }
 
 
 }
